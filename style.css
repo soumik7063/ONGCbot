@@ -34,6 +34,8 @@ df-messenger {
 .header.scrolled {
   padding: 0.5rem 0;
   background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -115,6 +117,7 @@ df-messenger {
 .hero {
   height: 100vh;
   background-image: url(https://isfm.co.in/wp-content/uploads/2024/11/upcoming-ongc-ipo.webp);
+  -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
   /* background: linear-gradient(
       135deg,
@@ -183,9 +186,8 @@ df-messenger {
 }
 
 .btn-secondary {
-  background: transparent;
+  background: linear-gradient(45deg, #143279, #3842ae);
   color: white;
-  border: 2px solid white;
 }
 
 .btn:hover {
@@ -198,8 +200,7 @@ df-messenger {
 }
 
 .btn-secondary:hover {
-  background: white;
-  color: #1e3c72;
+  background: linear-gradient(45deg, #143279, #3842ae);
 }
 
 /* Stats Section */
@@ -405,6 +406,7 @@ df-messenger {
   background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 15px;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -519,4 +521,28 @@ df-messenger {
   background: linear-gradient(45deg, #ff6b35, #f7931e);
   z-index: 1001;
   transition: width 0.1s ease;
+}
+
+#draggable-chatbot {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  min-width: 350px;
+  max-width: 90vw;
+  width: 400px;
+  min-height: 500px;
+  max-height: 90vh;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+#draggable-chatbot df-messenger {
+  height: 100%;
+  width: 100%;
+  min-height: 500px;
+  min-width: 350px;
 }
